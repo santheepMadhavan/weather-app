@@ -3,7 +3,7 @@ const searchCity = (event) => {
   const value = document.getElementById("inputField").value;
   const API_KEY = "690579a54b13d363a6de030aa41f1683";
 
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${value}&id=524901&appid=${API_KEY}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&id=524901&appid=${API_KEY}&units=metric`;
   if (value != "") fetchWeather(url);
 };
 
