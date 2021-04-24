@@ -33,7 +33,7 @@ const fetchWeather = (url) => {
         "cityName"
       ).innerText = `${response.name} - ${response.sys.country}`;
       const iconCode = response.weather[0].icon;
-      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+      const iconUrl = ` https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${iconCode}@2x.png`;
       document.getElementById("image").src = iconUrl;
       document.getElementById("temperatureName").innerText =
         response.weather[0].main;
