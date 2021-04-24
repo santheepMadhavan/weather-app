@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/index.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="flex flex-center">
+        <img
+          class="margin-left-xs margin-right-xs"
+          src="./images/iconfinder_Snow_3741358.svg"
+          alt="icon"
+        />
+        <span>Weather App</span>
+      </div>
+    </section>
+    <section class="content">
+      <form onsubmit="searchCity(event)" class="flex">
+        <input
+          id="inputField"
+          class="input-field"
+          type="text"
+          autofocus
+          placeholder="Search for a city"
+        />
+        <button class="margin-left-xs button-submit" type="submit">
+          Search
+        </button>
+      </form>
+      <div class="content-result margin-s">
+        <div id="card" class="weather-card">
+          <p id="cityName"></p>
+          <div class="date" id="date"></div>
+          <div class="margin-top-m">
+            <span id="temperature" class="title-font"></span>
+          </div>
+          <div>
+            <img id="image" src="" alt="" />
+          </div>
+          <div id="temperatureName"></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer"></section>
+  </body>
+</html>

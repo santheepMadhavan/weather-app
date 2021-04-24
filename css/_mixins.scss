@@ -1,0 +1,22 @@
+@import "var";
+
+@mixin headerFooter {
+  background-color: $primary-color;
+  color: $text-color;
+  font: {
+    size: $title-font;
+    family: $font-family;
+  }
+  height: 48px;
+  line-height: 48px;
+  @content;
+}
+
+@mixin button-design {
+  background-color: $secondary-color;
+  border-radius: 6px;
+  color: $text-color;
+  border: none;
+  font-size: $med-font;
+  cursor: pointer;
+}

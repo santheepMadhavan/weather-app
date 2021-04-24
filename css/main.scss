@@ -1,0 +1,142 @@
+@import "mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  @include headerFooter;
+}
+
+.footer {
+  @include headerFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.content {
+  width: 60%;
+  margin: 32px auto;
+
+  .input-field {
+    height: 32px;
+    width: calc(100% - 100px);
+    font-size: $med-font;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+  }
+
+  .button-submit {
+    width: 100px;
+    @include button-design;
+  }
+  .weather-card {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    text-align: center;
+    width: 30%;
+    padding: 8px;
+    margin-top: 32px;
+  }
+  .title-font {
+    font-size: $med-font;
+    font-family: $font-family;
+  }
+  #cityName {
+    @extend .title-font;
+    color: $secondary-color;
+  }
+  .content-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #temperatureName {
+    @extend .title-font;
+    margin-bottom: 16px;
+  }
+  #card {
+    display: none;
+  }
+}
+
+// Standard Stylings
+
+//Flex
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+// Margin
+.margin-xs {
+  margin: 8px;
+}
+.margin-s {
+  margin: 12px;
+}
+.margin-m {
+  margin: 16px;
+}
+.margin-l {
+  margin: 24px;
+}
+
+.margin-right-xs {
+  margin-right: 8px;
+}
+.margin-right-s {
+  margin-right: 12px;
+}
+.margin-right-m {
+  margin-right: 16px;
+}
+.margin-right-l {
+  margin-right: 24px;
+}
+
+.margin-left-xs {
+  margin-left: 8px;
+}
+.margin-left-s {
+  margin-left: 12px;
+}
+.margin-left-m {
+  margin-left: 16px;
+}
+.margin-left-l {
+  margin-left: 24px;
+}
+
+.margin-top-m {
+  margin-top: 16px;
+}
+
+//media queries
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 925px) {
+  .content {
+    width: 90%;
+  }
+  #card {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 925px) {
+  #card {
+    width: 80%;
+  }
+}
