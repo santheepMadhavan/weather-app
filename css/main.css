@@ -90,6 +90,7 @@ body {
 .content #card,
 .content #info-card {
   display: none;
+  visibility: hidden;
 }
 
 .content .more-info-card {
