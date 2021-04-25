@@ -1,6 +1,7 @@
 @import "var";
 
 @mixin headerFooter {
+  // @include background-gradient();
   background-color: $primary-color;
   color: $text-color;
   font: {
@@ -13,10 +14,17 @@
 }
 
 @mixin button-design {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   border-radius: 6px;
   color: $text-color;
   border: none;
   font-size: $med-font;
   cursor: pointer;
+}
+
+@mixin background-gradient {
+  background: $secondary-color;
+  background: -webkit-linear-gradient(bottom, $secondary-color, $primary-color);
+  background: -moz-linear-gradient(bottom, $secondary-color, $primary-color);
+  background: linear-gradient(to top, $secondary-color, $primary-color);
 }

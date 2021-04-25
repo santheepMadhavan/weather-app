@@ -25,6 +25,7 @@ const fetchWeather = (url) => {
     .then((response) => {
       document.querySelector("form").reset();
       document.getElementById("card").style.display = "inline-block";
+      document.getElementById("info-card").style.display = "inline-block";
       document.getElementById("date").innerText = new Date().toLocaleDateString(
         "en-US",
         options
@@ -40,6 +41,20 @@ const fetchWeather = (url) => {
       document.getElementById("temperature").innerHTML = `${Math.round(
         response.main.temp
       )} <sup>°C</sup>`;
+      let unix = 1507473344;
+      let date = new Date(response.sys.sunrise * 1000);
+      console.log(date);
+      document.getElementById(
+        "feelsLike"
+      ).innerHTML = `${response.main.feels_like} <sup class='small-font'>°C</sup>`;
+      document.getElementById("humidity").innerText =
+        response.main.humidity + "%";
+      document.getElementById(
+        "highLow"
+      ).innerText = `${response.main.temp_max}°C / ${response.main.temp_min}°C`;
+      document.getElementById("pressure").innerText =
+        response.main.pressure + " mb";
+      document.getElementById("wind").innerText = response.wind.speed + "km/hr";
     })
     .catch((err) => {
       alert(err.message);

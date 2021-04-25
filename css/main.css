@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-  background-color: black;
+  background-color: #55619c;
   color: white;
   font-size: 24px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +13,7 @@ body {
 }
 
 .footer {
-  background-color: black;
+  background-color: #55619c;
   color: white;
   font-size: 24px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@ body {
 }
 
 .content {
-  width: 60%;
+  width: 80%;
   margin: 32px auto;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .content .button-submit {
   width: 100px;
-  background-color: rgba(255, 0, 0, 0.774);
+  background-color: #55619c;
   border-radius: 6px;
   color: white;
   border: none;
@@ -54,8 +54,13 @@ body {
           box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   text-align: center;
   width: 30%;
-  padding: 8px;
+  padding: 16px;
   margin-top: 32px;
+  background: #609dd6;
+  background: -webkit-gradient(linear, left bottom, left top, from(#609dd6), to(#55619c));
+  background: linear-gradient(to top, #609dd6, #55619c);
+  border-radius: 6px;
+  color: white;
 }
 
 .content .title-font, .content #cityName, .content #temperatureName {
@@ -64,7 +69,7 @@ body {
 }
 
 .content #cityName {
-  color: rgba(255, 0, 0, 0.774);
+  font-weight: bold;
 }
 
 .content .content-result {
@@ -82,8 +87,40 @@ body {
   margin-bottom: 16px;
 }
 
-.content #card {
+.content #card,
+.content #info-card {
   display: none;
+}
+
+.content .more-info-card {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  width: 50%;
+  margin-top: 32px;
+  background-color: rgba(204, 204, 204, 0.418);
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.content #feelsLike {
+  font-size: 36px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content .small-font {
+  font-size: 18px;
+  margin-left: -8px;
+}
+
+.content .line {
+  border-top: 2px dashed #ccc;
+}
+
+.content .image-icon {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
 }
 
 .flex {
@@ -96,6 +133,24 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .margin-xs {
@@ -134,7 +189,7 @@ body {
   margin-left: 8px;
 }
 
-.margin-left-s {
+.margin-left-s, .content .more-info-card {
   margin-left: 12px;
 }
 
@@ -150,9 +205,28 @@ body {
   margin-top: 16px;
 }
 
+.width-1-1 {
+  width: 100%;
+}
+
+.width-1-2 {
+  width: 50%;
+}
+
+.width-1-4 {
+  width: 25%;
+}
+
 @media only screen and (max-width: 1200px) {
   .content {
     width: 80%;
+  }
+  #card {
+    width: 60%;
+  }
+  #info-card {
+    width: 60%;
+    margin-bottom: 48px !important;
   }
 }
 
@@ -161,13 +235,28 @@ body {
     width: 90%;
   }
   #card {
-    width: 50%;
+    width: 80%;
+  }
+  #info-card {
+    width: 80%;
+    margin: 12px 0px;
   }
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 700px) {
   #card {
-    width: 80%;
+    width: 100%;
+  }
+  #info-card {
+    width: 100%;
+    margin: 12px 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #info-card .width-1-2 {
+    width: 100%;
+    margin-top: 4px;
   }
 }
 /*# sourceMappingURL=main.css.map */

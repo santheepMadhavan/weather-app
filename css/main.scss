@@ -18,7 +18,7 @@ body {
 }
 
 .content {
-  width: 60%;
+  width: 80%;
   margin: 32px auto;
 
   .input-field {
@@ -38,8 +38,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     text-align: center;
     width: 30%;
-    padding: 8px;
+    padding: 16px;
     margin-top: 32px;
+    @include background-gradient();
+    border-radius: 6px;
+    color: $text-color;
   }
   .title-font {
     font-size: $med-font;
@@ -47,7 +50,8 @@ body {
   }
   #cityName {
     @extend .title-font;
-    color: $secondary-color;
+    // color: $secondary-color;
+    font-weight: bold;
   }
   .content-result {
     display: flex;
@@ -58,8 +62,35 @@ body {
     @extend .title-font;
     margin-bottom: 16px;
   }
-  #card {
+  #card,
+  #info-card {
     display: none;
+  }
+  .more-info-card {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    width: 50%;
+    margin-top: 32px;
+    @extend .margin-left-s;
+    background-color: rgba(204, 204, 204, 0.418);
+    padding: 24px;
+    border-radius: 6px;
+  }
+  #feelsLike {
+    font-size: 36px;
+    font-family: $font-family;
+  }
+  .small-font {
+    font-size: 18px;
+    margin-left: -8px;
+  }
+  .line {
+    border-top: 2px dashed #ccc;
+  }
+  .image-icon {
+    font-size: $lar-font;
+    width: $lar-font;
+    height: $lar-font;
+    margin-right: 8px;
   }
 }
 
@@ -72,6 +103,16 @@ body {
 
 .flex-center {
   justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 // Margin
@@ -118,11 +159,29 @@ body {
   margin-top: 16px;
 }
 
+//Width
+.width-1-1 {
+  width: 100%;
+}
+
+.width-1-2 {
+  width: 50%;
+}
+.width-1-4 {
+  width: 25%;
+}
 //media queries
 
 @media only screen and (max-width: 1200px) {
   .content {
     width: 80%;
+  }
+  #card {
+    width: 60%;
+  }
+  #info-card {
+    width: 60%;
+    margin-bottom: 48px !important;
   }
 }
 
@@ -131,12 +190,29 @@ body {
     width: 90%;
   }
   #card {
-    width: 50%;
+    width: 80%;
+  }
+  #info-card {
+    width: 80%;
+    margin: 12px 0px;
   }
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 700px) {
   #card {
-    width: 80%;
+    width: 100%;
+  }
+  #info-card {
+    width: 100%;
+    margin: 12px 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #info-card {
+    .width-1-2 {
+      width: 100%;
+      margin-top: 4px;
+    }
   }
 }

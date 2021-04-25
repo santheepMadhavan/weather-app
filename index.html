@@ -32,7 +32,7 @@
           Search
         </button>
       </form>
-      <div class="content-result margin-s">
+      <div class="content-result flex margin-s">
         <div id="card" class="weather-card">
           <p id="cityName"></p>
           <div class="date" id="date"></div>
@@ -43,6 +43,48 @@
             <img id="image" src="" alt="" />
           </div>
           <div id="temperatureName"></div>
+        </div>
+        <div id="info-card" class="more-info-card">
+          <div id="feelsLike">42 <sup class="small-font">°C</sup></div>
+          <div>Feels Like</div>
+          <div class="line margin-top-m"></div>
+          <div class="flex flex-column">
+            <div class="flex flex-wrap margin-xs">
+              <div class="width-1-2 flex align-center">
+                <img
+                  class="image-icon"
+                  src="./images/iconfinder_weather_12_2682839.svg"
+                  alt=""
+                />
+                Humidity: <span class="margin-left-xs" id="humidity">62</span>
+              </div>
+              <div class="width-1-2 flex align-center">
+                <img
+                  class="image-icon"
+                  src="./images/iconfinder_thermometer-celsius-degrees-temperature-weather_3856401.svg"
+                  alt=""
+                />High/Low:
+                <span class="margin-left-xs" id="highLow">30°/30°</span>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="flex flex-wrap margin-xs">
+              <div class="width-1-2 flex align-center">
+                <img class="image-icon" src="./images/pressure.png" alt="" />
+                Pressure:
+                <span class="margin-left-xs" id="pressure">1008.8 mb</span>
+              </div>
+              <div class="width-1-2 flex align-center">
+                <img
+                  class="image-icon"
+                  src="./images/iconfinder_weather_41_2682810.svg"
+                  alt=""
+                />
+
+                Wind: <span class="margin-left-xs" id="wind"> 6 km/hr</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
