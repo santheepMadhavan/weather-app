@@ -20,7 +20,10 @@ body {
 .content {
   width: 80%;
   margin: 32px auto;
-
+  #content-result {
+    display: none;
+    visibility: hidden;
+  }
   .input-field {
     height: 32px;
     width: calc(100% - 100px);
@@ -61,11 +64,6 @@ body {
   #temperatureName {
     @extend .title-font;
     margin-bottom: 16px;
-  }
-  #card,
-  #info-card {
-    display: none;
-    visibility: hidden;
   }
   .more-info-card {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;

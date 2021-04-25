@@ -30,6 +30,11 @@ body {
   margin: 32px auto;
 }
 
+.content #content-result {
+  display: none;
+  visibility: hidden;
+}
+
 .content .input-field {
   height: 32px;
   width: calc(100% - 100px);
@@ -85,12 +90,6 @@ body {
 
 .content #temperatureName {
   margin-bottom: 16px;
-}
-
-.content #card,
-.content #info-card {
-  display: none;
-  visibility: hidden;
 }
 
 .content .more-info-card {

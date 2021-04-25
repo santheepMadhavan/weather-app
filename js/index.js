@@ -24,8 +24,8 @@ const fetchWeather = (url) => {
     })
     .then((response) => {
       document.querySelector("form").reset();
-      document.getElementById("card").style.display = "inline-block";
-      document.getElementById("info-card").style.display = "inline-block";
+      document.getElementById("content-result").style.display = "flex";
+      document.getElementById("content-result").style.visibility = "visible";
       document.getElementById("date").innerText = new Date().toLocaleDateString(
         "en-US",
         options
